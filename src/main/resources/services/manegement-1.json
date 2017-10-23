@@ -1,7 +1,0 @@
-{
-  "@class" : "org.apereo.cas.services.RegexRegisteredService",
-  "serviceId" : "https://192.168.0.81.*",
-  "name" : "management",
-  "id" : 1,
-  "description" : "Allows all 81 services"
-}

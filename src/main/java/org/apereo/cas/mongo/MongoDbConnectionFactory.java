@@ -101,16 +101,16 @@ public class MongoDbConnectionFactory {
      * @return the mongo template
      */
     public MongoTemplate buildMongoTemplate(final String clientUri) {
-        // System.out.println("1.成功进入buildMongoTemplate");
+        System.out.println("1.成功进入buildMongoTemplate");
 
         final MongoClientURI uri = buildMongoClientURI(clientUri);
-        // System.out.println("2.成功创建MongoClientURI");
+        System.out.println("2.成功创建MongoClientURI");
 
         final Mongo mongo = buildMongoDbClient(clientUri, buildMongoDbClientOptions());
-        // System.out.println("3.成功创建Mongo");
+        System.out.println("3.成功创建Mongo");
         
         final MongoDbFactory mongoDbFactory = mongoDbFactory(mongo, uri.getDatabase());
-        // System.out.println("4.成功创建MongoDbFactory");
+        System.out.println("4.成功创建MongoDbFactory");
         
         return new MongoTemplate(mongoDbFactory, mappingMongoConverter(mongoDbFactory));
     }

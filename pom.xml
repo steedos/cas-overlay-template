@@ -10,14 +10,15 @@
 
     <build>
         <plugins>
-            <plugin>
+            <!-- 清理target -->
+           <!--  <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-clean-plugin</artifactId>
                 <version>3.0.0</version>
                 <configuration>
-                    <skip>true</skip>
+                    <skip>false</skip>
                 </configuration>
-            </plugin>
+            </plugin> -->
             <plugin>
                 <groupId>com.rimerosolutions.maven.plugins</groupId>
                 <artifactId>wrapper-maven-plugin</artifactId>
@@ -124,11 +125,11 @@
             <artifactId>commons-codec</artifactId>
             <version>1.9</version>
         </dependency>
-        <dependency>
+       <!--  <dependency>
             <groupId>org.apereo.cas</groupId>
             <artifactId>cas-server-support-json-service-registry</artifactId>
             <version>${cas.version}</version>
-        </dependency>
+        </dependency> -->
         <dependency>
             <groupId>org.apereo.cas</groupId>
             <artifactId>cas-server-support-mongo-service-registry</artifactId>
@@ -141,11 +142,6 @@
             <artifactId>spring-data-mongodb-parent</artifactId>
             <version>2.0.1.BUILD-SNAPSHOT</version>
         </dependency> -->
-        <dependency>
-            <groupId>org.apereo.cas</groupId>
-            <artifactId>cas-server-support-json-service-registry</artifactId>
-            <version>${cas.version}</version>
-        </dependency>
 
         <dependency>
             <groupId>com.github.ben-manes.caffeine</groupId>

@@ -1,7 +1,7 @@
 {
   "@class" : "org.apereo.cas.services.RegexRegisteredService",
   "serviceId" : "^(https|http)://.*",
-  "name" : "steedos",
+  "name" : "all",
   "id" : 0,
-  "description" : "Allows only steedos services"
+  "description" : "Allows all services"
 }

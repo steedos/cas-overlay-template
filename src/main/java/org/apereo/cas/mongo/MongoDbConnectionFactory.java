@@ -300,17 +300,16 @@ public class MongoDbConnectionFactory {
     }
 
     private Mongo buildMongoDbClient(final String clientUri, final MongoClientOptions clientOptions) {
-        // System.out.println("========buildMongoDbClient========");
         final MongoClientURI uri = buildMongoClientURI(clientUri);
-        // System.out.println("a.成功buildMongoClientURI");
-        // System.out.println("这里出错了，MongoCredential方法中，必须要username参数不为空");
-        // final MongoCredential credential = buildMongoCredential(uri);
-        // System.out.println("b.成功buildMongoCredential");
-
-        //final String hostUri = uri.getHosts().get(0);
-        //final String[] host = hostUri.split(":");
-        //final ServerAddress addr = new ServerAddress(host[0], host.length > 1 ? Integer.parseInt(host[1]) : DEFAULT_PORT);
         return new MongoClient(uri);
+        //此方法原始代码
+        // final MongoClientURI uri = buildMongoClientURI(clientUri);
+        // 此处认证出错，如果数据库没有auth属性
+        // final MongoCredential credential = buildMongoCredential(uri);
+        // final String hostUri = uri.getHosts().get(0);
+        // final String[] host = hostUri.split(":");
+        // final ServerAddress addr = new ServerAddress(host[0], host.length > 1 ? Integer.parseInt(host[1]) : DEFAULT_PORT);
+        // return new MongoClient(addr, Collections.singletonList(credential), clientOptions);
     }
 
     private MongoCredential buildMongoCredential(final MongoClientURI uri) {

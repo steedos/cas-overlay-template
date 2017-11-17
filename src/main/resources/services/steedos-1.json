@@ -1,7 +1,0 @@
-{
-  "@class" : "org.apereo.cas.services.RegexRegisteredService",
-  "serviceId" : "https://cn.steedos.com",
-  "name" : "steedos",
-  "id" : 1,
-  "description" : "Allows all services"
-}

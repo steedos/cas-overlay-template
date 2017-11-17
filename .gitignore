@@ -12,3 +12,5 @@ build/
 bin/
 *.iml
 *.log
+src/main/resources/services/all-0.json
+src/main/resources/services/all-0.json
